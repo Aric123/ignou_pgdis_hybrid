@@ -124,4 +124,4 @@ if __name__ == "__main__":
 	app.secret_key = os.urandom(24)
 	app.config['SESSION_TYPE'] = 'filesystem'
 	app.debug = True
-	app.run(host='127.0.0.1', port=8000, debug=True)
+	app.run(host="0.0.0.0", port=80) #app.run(host='0.0.0.0') #app.run() #(host='18.138.215.184', port=8000, debug=True)
