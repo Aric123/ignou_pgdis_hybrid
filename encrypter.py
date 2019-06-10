@@ -100,7 +100,7 @@ def encrypter():
 			Algo4(files[index], key_4, nonce13)
 	secret_information = key_1_1+":::::" + key_1_2 + ":::::" + key_2 + ":::::" + key_3 + ":::::" + key_4 + ":::::" + nonce12 + ":::::" + nonce13
 	Algo1(secret_information,key_1)
-	public_key = open("./key/hybrid_cryptography.pem", "wb")
+	public_key = open("./key/hybrid_cryptography_demo.pem", "wb")
 	public_key.write(key_1)
 	public_key.close()
 	tools.empty_folder('files')

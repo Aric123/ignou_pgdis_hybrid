@@ -164,12 +164,12 @@
 <!--- Start the Modal Work Upload Ends ----->
 
         <!--- Start the Modal Work Restore ----->
-        <div class="modal fade" id="restoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="restoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <form role="form" method="POST" action = "/download_data" enctype = "multipart/form-data" >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Restore Your File</h5>
+        <h5 class="modal-title" id="restoreModalLabel">Restore Your File</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -177,7 +177,7 @@
       <div class="modal-body">
                         <div class="form-group">
                           <label for="file" class="col-form-label"></label>
-                            <input type="file" id="file" name="file" required/>
+                            <input type="file" id="key_file" name="file" required/>
                         </div>
       </div>
       <div class="modal-footer">

@@ -41,7 +41,7 @@ def send_email(mail_id):
 
     # Sending file as attachments.
     filename = "hybrid_cryptography.pem"
-    attachment = open("./key/hybrid_cryptography.pem", "rb")
+    attachment = open("./key/hybrid_cryptography_demo.pem", "rb")
     # instance of MIMEBase and named as p
     p = MIMEBase('application', 'octet-stream')
     # To change the payload into encoded form

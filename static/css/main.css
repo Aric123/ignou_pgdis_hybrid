@@ -712,6 +712,11 @@ a.back-to-top:hover, a.back-to-top:focus {
   background-size: cover;
 }
 
+.hero-area-bg-pgdis {
+  background: url(../img/hero-area-pgdis.jpg) no-repeat;
+  background-size: cover;
+}
+
 #hero-area {
   color: #fff;
   overflow: hidden;

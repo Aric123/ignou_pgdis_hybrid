@@ -130,7 +130,7 @@ if __name__ == "__main__":
 	app.secret_key = os.urandom(24)
 	app.config['SESSION_TYPE'] = 'filesystem'
 	app.debug = True
-	app.run(host="0.0.0.0", port=80, debug=True) # Domain Name can be kept here.
+	app.run(host="127.0.10.11", port=80, debug=True) # Domain Name can be kept here.
 
 
 # def _limitation():
