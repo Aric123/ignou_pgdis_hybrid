@@ -3,11 +3,13 @@
 ## Objective: To Achieve a secure Platform for storing of files on Cloud using Hybrid Cryptography.</br>
 
 # Methodology
-To achieve the above goal, the following methodology needs to be followed:</br>
+To achieve the above goal, the following methodology been followed:</br>
 1. Load the file on the server.</br>
-2. Dividing the uploaded file into N parts.</br>
-3. Encrypting all the parts of the file using any one of the selected algorithms (Algorithm is changed with every part in round robin fashion).</br>
-4. The keys for cryptography algorithms is then secured using a different algorithm and the key for this algorithm is provided to the user as public key.</br>
+2. Dividing the uploaded file into N parts, Where N depends on the Buffer Size of the uploaded file </br>
+3. Encrypting all the parts(N- numbers) of the file using any one of the selected algorithms 
+(Algorithm is changed with every part in round robin fashion).</br>
+4. The keys for cryptography algorithms is then secured using a different algorithm and the key for this algorithm is 
+provided to the user as public key.</br>
 5. The Key for cryptography Algorithms is been sent to user's email id</br>
 
 After the above 4 steps you will have a N files which are in encrypted form which are stored on the server and a key 
@@ -27,16 +29,18 @@ Step 1: Install Requirements</br>
 `pip install -r requirements.txt`</br>
 
 Step 2: Run the application</br>
-`python app.py`</br>
+`sudo python app.py`</br>
 
 Step 3: Visit the localhost from your browser</br>
-
+Default URL is given is 0.0.0.0 and Port is 80, which is good for Production environment as well. 
+ 
 Step 4: Enjoy :-0
 
 **IF YOU ENCOUNTER ANY BUGS OR FOR ANY SUGGESTIONS REGARDING THE IMPROVEMENT OF THE PROJECT FEEL FREE TO CONTACT ME :**
 
-Abhishek Kumar	-	hello@kumarabhi.com<br/>
-
+Abhishek Kumar<br/>
+hello@kumarabhi.com<br/>
+abhishek.ricky88@gmail.com
 
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
@@ -70,17 +74,6 @@ Abhishek Kumar	-	hello@kumarabhi.com<br/>
     </div>
   </div>
 </div>
-
-
-"""
-Running Flask in Auto-start-script
-Mapping with the domain.
-Final Ticket to-n-fro. 
-Mumbai to Sangli -- Train -- booknow
-Sangli to Pune -- Train ---  Booknow
-Pune to Mumbai - cab 
-GITHUB Account create with the mail abhishek.ricky88@gmail.com
-"""
 
 """
 Check with the Satikar Sir, 
@@ -146,7 +139,7 @@ Darshan -- ask for get some leave from office.
 
  
  ******* 8 -12 PM everyday. 
- 9, 10, 11, 12, 13, 14, 15
+ 10, 11, 12, 13, 14, 15
 16, 17, 18, 19, 20, 21, 22
 
 7:30pm - 1:30am. 
