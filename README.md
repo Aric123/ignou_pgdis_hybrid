@@ -41,40 +41,6 @@ Step 4: Enjoy :-0
 Abhishek Kumar<br/>
 hello@kumarabhi.com<br/>
 abhishek.ricky88@gmail.com
-
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 """
 Check with the Satikar Sir, 
 for Project Report : send a mail with the soft-copy. 
@@ -82,11 +48,11 @@ and ask for confirmation if all seems fine.
 
 Project Report Formulation:
 The project report should contain the following:
-	Original copy of the Approved Proforma and Project Proposal.
-	Certificate of Originality (Format given on Page 12).
-	Project documentation.
-
+	1. Original copy of the Approved Proforma and Project Proposal.
+	2. Certificate of Originality (Format given on Page 12).
+	3. Project documentation.
 ## Topic is fine, use some case studies, Identify challenges and investigation policies.
+
 
 Table of Contents(Index with page numbering)
 Must contain header and footer of the project on each page.
@@ -104,7 +70,7 @@ Introduction / Objectives - 10
 	current available applications and challenges, challenges part, strong part of the project.
 	Course contents part from PGDIS
 
-Research Methodology/ Reference - 25
+Research Methodology/ Reference - 15
 	Technology selected
 	Why Python and its version. 
 	Benefit from python. 
@@ -112,7 +78,7 @@ Research Methodology/ Reference - 25
 	Pictorial explanations
 	Information security part covered.
 	
-Explanation Hands-on Source code - 30 With screen-shots
+Explanation Hands-on Source code - 45 With screen-shots
 	Source Repository. 
 	Link to see online application
 	Link to download the

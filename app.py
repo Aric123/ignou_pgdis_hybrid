@@ -16,8 +16,6 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['UPLOAD_KEY'] = UPLOAD_KEY
 
-# port = int(os.getenv('PORT', 8000))
-
 
 def allowed_file(filename):
 	return '.' in filename and \
@@ -132,5 +130,17 @@ if __name__ == "__main__":
 	app.secret_key = os.urandom(24)
 	app.config['SESSION_TYPE'] = 'filesystem'
 	app.debug = True
-	app.run(host="0.0.0.0", port=80
-			) #app.run(host='0.0.0.0') #app.run() #(host='18.138.215.184', port=8000, debug=True)
+	app.run(host="0.0.0.0", port=80, debug=True) # Domain Name can be kept here.
+
+
+# def _limitation():
+# 	1. Login Authetication access on the platform.
+# 	2. Users Account Option(Profile)
+# 	3. Option for Index the file.
+# 	4. Access for define file type, indexing.
+# 	5. Limitation for more than a file, allow to kepp multiple file.
+# 	6. Proper directory str. for the Encrypted and other files.
+# 	7. Link to sahre file for public or not.
+# 	8. Able to re-generate the key file incase of lost key file.
+# 	9. Multiple location data store, and server load.
+# 	10 Full Encryption Note.
