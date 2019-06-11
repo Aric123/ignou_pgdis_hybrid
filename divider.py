@@ -1,7 +1,12 @@
 import sys
 import tools
 
+
 def divide():
+	'''
+	Splits uploaded binary files into chapters .000, .001,
+	then on chapters we will do individually encryption.
+	'''
 	tools.empty_folder('files')
 	tools.empty_folder('raw_data')
 	FILE = tools.list_dir('uploads')
@@ -11,7 +16,7 @@ def divide():
 	BUF  = 50*1024*1024*1024  			# 50GB	-	memory buffer size
 
 	chapters = 0
-	uglybuf  = ''
+	buf = ''
 	meta_data = open('raw_data/meta_data.txt','w')
 	file__name = FILE.split('/')
 	file__name = file__name[-1]
@@ -21,15 +26,15 @@ def divide():
 			target_file = open('files/SECRET' + '%07d' % chapters, 'wb')
 			written = 0
 			while written < MAX:
-				if len(uglybuf) > 0:
-					target_file.write(uglybuf)
+				if len(buf) > 0:
+					target_file.write(buf)
 				target_file.write(src.read(min(BUF, MAX - written)))
 				written += min(BUF, MAX - written)
-				uglybuf = src.read(1)
-				if len(uglybuf) == 0:
+				buf = src.read(1)
+				if len(buf) == 0:
 					break
 			target_file.close()
-			if len(uglybuf) == 0:
+			if len(buf) == 0:
 				break
 			chapters += 1
 	meta_data.write("chapters=%d" % (chapters+1))

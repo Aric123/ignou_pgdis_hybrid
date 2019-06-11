@@ -2,6 +2,7 @@ import sys
 import os, shutil
 import tools
 
+
 def restore():
 	tools.empty_folder('restored_file')
 

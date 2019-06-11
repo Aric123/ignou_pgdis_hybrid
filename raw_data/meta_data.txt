@@ -1,2 +1,0 @@
-File_Name=Print-pdf.pdf
-chapters=2
