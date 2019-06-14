@@ -8,6 +8,12 @@ import decrypter as dec
 import restore as rst
 import email_send as mail
 
+from OpenSSL import SSL
+context = SSL.Context(SSL.SSLv23_METHOD)
+context.use_privatekey_file('web.key')
+context.use_certificate_file('web.crt')
+
+
 UPLOAD_FOLDER = './uploads/'
 UPLOAD_KEY = './key/'
 ALLOWED_EXTENSIONS = set(['pem'])
@@ -43,7 +49,14 @@ def return_key():
 	list_directory = tools.list_dir('key')
 	filename = './key/' + list_directory[0]
 	return send_file(filename, attachment_filename='My_Key.pem')
-
+#
+#a --upload file------- Our Application box
+#----Prodcess---- Uploadfile buff--- Break file ----- N no File buffer file.
+#---- Encryption on N -buffer files and sending
+#
+#A proces flow diagram of oevrall application.
+#Mention various process point and describe that points in various process flow images.
+#while --- process:
 
 @app.route('/return-file/')
 def return_file():
@@ -130,7 +143,7 @@ if __name__ == "__main__":
 	app.secret_key = os.urandom(24)
 	app.config['SESSION_TYPE'] = 'filesystem'
 	app.debug = True
-	app.run(host="0.0.0.0", port=80, debug=True) # Domain Name can be kept here.
+	app.run(host="0.0.0.0", port=80, ssl=context, debug=True) # Domain Name can be kept here.
 
 
 # def _limitation():
