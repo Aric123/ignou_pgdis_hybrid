@@ -7,7 +7,7 @@ from email import encoders
 
 
 MAIL_USERNAME = 'care@oyacharge.com'
-MAIL_PASSWORD = '2ca44ef0-9dc2-4b11-803b-9b1001848d39'
+MAIL_PASSWORD = 'XXXXXXXXXXXXXXXXXXXXXXXX'
 MAIL_SENDER = 'hello@kumarabhi.com'
 
 

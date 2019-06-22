@@ -8,10 +8,10 @@ import decrypter as dec
 import restore as rst
 import email_send as mail
 
-from OpenSSL import SSL
-context = SSL.Context(SSL.SSLv23_METHOD)
-context.use_privatekey_file('web.key')
-context.use_certificate_file('web.crt')
+# #from OpenSSL import SSL
+# context = SSL.Context(SSL.SSLv23_METHOD)
+# context.use_privatekey_file('web.key')
+# context.use_certificate_file('web.crt')
 
 
 UPLOAD_FOLDER = './uploads/'
@@ -35,6 +35,11 @@ def start_encryption(email):
 	mail_id = email
 	mail.send_email(mail_id)
 	return render_template('success.html')
+
+
+def send_form_email(mail_id, name, subject, message):
+	if message:
+		return render_template('busy.html')
 
 
 def start_decryption():
@@ -118,6 +123,16 @@ def upload_file():
 		# return 'Invalid File Format !' Code PEP-8 standard
 
 
+@app.route('/form_contact', methods=['POST'])
+def form_contact():
+	if request.method == 'POST':
+		mail_id = request.form.get('email')
+		name = request.form.get('name')
+		subject = request.form.get('msg_subject')
+		message = request.form.get('message')
+		return send_form_email(mail_id, name, subject, message)
+
+
 @app.route('/download_data', methods=['GET', 'POST'])
 def upload_key():
 	tools.empty_folder('key')
@@ -143,7 +158,7 @@ if __name__ == "__main__":
 	app.secret_key = os.urandom(24)
 	app.config['SESSION_TYPE'] = 'filesystem'
 	app.debug = True
-	app.run(host="0.0.0.0", port=80, ssl=context, debug=True) # Domain Name can be kept here.
+	app.run(host="0.0.0.0", port=80, debug=True) # Domain Name can be kept here. ssl=context
 
 
 # def _limitation():

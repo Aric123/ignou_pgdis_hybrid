@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Success:: Hybrid Cryptography for Cloud Storage </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome.min.css')}}">
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/simple-line-icons.css')}}">
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slicknav.css')}}">
+    <!-- Menu CSS -->
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/menu_sideslide.css')}}">
+    <!-- Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slide-style.css')}}">
+    <!-- Nivo Lightbox -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nivo-lightbox.css')}}" >
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css')}}">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/responsive.css')}}">
+  </head>
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+            </button>
+            <a href="/" class="navbar-brand"><img src="static/img/logo.png" alt=""></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="onepage-nev navbar-nav mr-auto w-100 justify-content-end clearfix">
+              <li class="nav-item active">
+                <a class="nav-link" href="/pgdis">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#about">
+                  About
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#services">
+                  Services
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#resume">
+                  Resume
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#portfolios">
+                  Work
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#contact">
+                  Contact
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pgdis">
+                  PGDIS PROJECT
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Start -->
+        <ul class="onepage-nev mobile-menu">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">about</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#resume">resume</a>
+          </li>
+          <li>
+            <a href="#portfolio">Work</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="/pgdis">IGNOU PGDIS</a>
+          </li>
+        </ul>
+        <!-- Mobile Menu End -->
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Hero Area Start -->
+      <div id="hero-area" class="hero-area-bg">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">
+              <div class="contents">
+                <h5 class="script-font wow fadeInUp" data-wow-delay="0.2s">Message Sending Rejected</h5>
+                <h2 class="head-title wow fadeInUp" data-wow-delay="0.4s">As I am too Busy to see inbox !!</h2>
+                <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Kindly contact me through +91-8082543463 for further query.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!--- Start the Modal Work Upload ----->
+<div class="modal fade" id="uploadeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <form role="form" method="POST" action = "/data" enctype = "multipart/form-data" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Upload Your File</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                        <div class="form-group">
+                          <label for="file" class="col-form-label"></label>
+                            <input type="file" id="file" name="file" required/>
+                        </div>
+                        <div class="form-group">
+                          <label for="email" class="col-form-label">Email:</label>
+                            <input type="email" id="email" class="form-control input-lg" name="email" required>
+                        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>
+<!--- Start the Modal Work Upload Ends ----->
+
+        <!--- Start the Modal Work Restore ----->
+      <div class="modal fade" id="restoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <form role="form" method="POST" action = "/download_data" enctype = "multipart/form-data" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="restoreModalLabel">Restore Your File</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                        <div class="form-group">
+                          <label for="file" class="col-form-label"></label>
+                            <input type="file" id="key_file" name="file" required/>
+                        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>
+        <!-- Model Work restore Ends here -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer-area section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
+              <ul class="social-icon">
+                <li>
+                  <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
+                </li>
+                <li>
+                  <a class="twitter" href="#"><i class="icon-social-twitter"></i></a>
+                </li>
+                <li>
+                  <a class="instagram" href="#"><i class="icon-social-instagram"></i></a>
+                </li>
+                <li>
+                  <a class="instagram" href="#"><i class="icon-social-linkedin"></i></a>
+                </li>
+                <li>
+                  <a class="instagram" href="#"><i class="icon-social-google"></i></a>
+                </li>
+              </ul>
+              <p>Copyright © 2019 Abhishek Kumar All Right Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="icon-arrow-up"></i>
+    </a>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="static/js/jquery-min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.mixitup.js"></script>
+    <script src="static/js/jquery.counterup.min.js"></script>
+    <script src="static/js/waypoints.min.js"></script>
+    <script src="static/js/wow.js"></script>
+    <script src="static/js/jquery.nav.js"></script>
+    <script src="static/js/jquery.easing.min.js"></script>
+    <script src="static/js/nivo-lightbox.js"></script>
+    <script src="static/js/jquery.slicknav.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/form-validator.min.js"></script>
+    <script src="static/js/contact-form-script.min.js"></script>
+    <script src="static/js/map.js"></script>
+  </body>
+</html>
