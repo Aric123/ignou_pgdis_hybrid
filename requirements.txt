@@ -1,4 +1,4 @@
-Flask==0.12.2
+Flask==1.0
 werkzeug
 cryptography==2.2.2
 #python==2.7.15
