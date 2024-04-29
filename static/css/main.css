@@ -1133,3 +1133,24 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 #copyright p a:hover {
   color: #00b4d9;
 }
+
+.hover-text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(62, 44, 44, 0.265); 
+  color: white;
+  /* padding: 10px; */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+.hover-text span {
+  font-size: 15px; /* Set font size for the span */
+  display: inline-block; /* Ensures text alignment works properly */
+}
+
+.portfolio-item:hover .hover-text {
+  opacity: 1; /* Show on hover */
+}
